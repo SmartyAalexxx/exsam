@@ -243,7 +243,8 @@ main{
 }
 
 .about{
-    height: 50vh;
+    min-height: 50vh;
+    max-height: 500px;
     display: flex;
     flex-direction: column;
     background-image: url(/img/sectionbg1.png);
@@ -264,6 +265,7 @@ main{
         overflow: hidden;
         padding: 50px 30px;
         margin: 10% 0;
+        align-items: center;
         &:last-child{
             align-items: flex-end;
             justify-content: flex-end;
