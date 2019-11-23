@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap');
+@import 'normalize';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+$brand-color: #5474fd;
+
+html {
+    height: 100%;
+    font-size: 10px;
+    padding: 15px;
+    background-color: #999;
+}
+
+body {
+    min-height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Josefin Sans' ,sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.8em;
+}
+
+header{
+    background-color: $brand-color;
+    height: 100vh;
+    font-size: 0;
+    position: relative;
+    display: flex;
+    background-image: url(/img/bgheader.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 96%;
+}
+
+.title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 25% 25px 1%;
+    letter-spacing: 5px;
+}
+
+.subtitle{
+    display: inline-block;
+    width: 100%;
+    padding: 1% 25px;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.forms {
+    width: 55%;
+    align-items: center;
+    background: $brand-color;
+    padding: 10px;
+    margin: 0 auto;
+
+    &__input, &__buttom{
+        background: transparent;
+        font-size: 1.6rem;
+        color: #fff;
+        
+    }
+    &__input{
+        width: 100%;
+        border: 5px solid #F9F0DA;
+        height: 42px;
+        padding-left: 15px;
+        width: 80%;
+        & {
+            @include hover {
+                opacity: .6;
+                border-color: #999;}
+            }
+    }
+
+    &__buttom{
+        border: 5px solid green;
+        height: 42px;
+        width: 42px;
+        cursor: pointer;
+        z-index: 2;
+        &::before{
+            content: "\f002";
+            font-family: "FontAwesome";
+            font-size: 1.6rem;
+            color: #F9F0DA;
+
+        }
+    }
+}
+.scrool{
+    display: inline-block;
+    margin: 110px auto;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.nav{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-color;
+    font-size: 1.4rem;
+    height: 80px;
+
+    &__title {
+        margin: 0 0 0 10%  ;
+        font-weight: 700;
+        font-size: 2.4rem;
+        padding: 20px;
+        float: left;
+        
+    }
+    
+    &__link{
+        font-family: 'Aleo' ,sans-serif;
+        text-transform: uppercase;
+        float: right;
+        padding: 20px;
+        &:last-child{
+            // margin-left: 10%;
+            color: red;
+        }
+    }
+}
+
+main{
+    background-color: #333;
+    height: 100vh;
+    padding: 120px 0 0 0;
+    
+}
+.main {
+    background-image: url(/img/bgmain.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    & .container{
+        display: flex;}
+    &__text{
+        width: 50%;
+        padding: 80px 10px 10px;
+        
+    }
+    &__title{
+        font-size: 3.6rem;
+        font-family: "Aleo", sans-serif;
+        
+    }
+    
+    &__subtitle{
+        max-height: 280px;
+        overflow: hidden;
+        font-size: 1.6rem;
+    }
+
+    &__btn{
+        display: inline-block;
+        text-align: center;
+        padding: 15px;
+        min-width: 220px;
+        min-height: 60px;
+        background-color: $brand-color;
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Aleo',sans-serif;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        border: 3px solid transparent;
+    }
+    
+    &__imgs{
+        padding: 20px;
+        width: 40%;
+        flex-direction: column;
+        display: flex;
+    }
+    &__img{
+        width: 7    0%;
+        padding: 10px 0;        
+        align-self: flex-start;
+        &:last-child{
+            align-self: flex-end
+        }
+    }
+        &__img:last-child{
+        justify-content: flex-end;
+    }
+ 
+    &__end{
+        max-width: 1000px;
+        margin: 4% auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;    
+        background-image: url(/img/main-endM.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    &__endblock{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    &__endimg{
+        align-self: center;
+        background-color: #333;
+        // border-radius: 50%; кусок 3й картинки обрезает
+        padding: 5px;
+       height: 70px;
+        align-items: center;
+        
+    }
+    &__endtext{
+        font-family: 'Aleo', sans-serif;
+        font-size: 3.6rem;
+        padding: 30px;
+    }
+}
+
+.about{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/sectionbg1.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &:last-child{
+        background-image: url(/img/sectionbg2.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__info{
+        max-height: 370px;
+        max-width: 540px;
+        background-color: #000000bb;
+        overflow: hidden;
+        padding: 50px 30px;
+        margin: 10% 0;
+        &:last-child{
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+
+    &__btn{
+        display: inline-block;
+        text-align: center;
+        padding: 15px;
+        min-width: 220px;
+        min-height: 60px;
+        background-color: $brand-color;
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Aleo',sans-serif;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        border: 3px solid transparent;
+    }
+
+    
+}
