@@ -367,37 +367,55 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #5474fd;
-  padding: 10px;
-  margin: 0 auto; }
-  .forms__input, .forms__buttom {
+  background: #fff;
+  padding: 1px;
+  margin: 0 auto;
+  height: 60px; }
+  .forms__input, .forms__button, .forms__icon {
     background: transparent;
     font-size: 1.6rem;
-    color: #fff; }
+    color: #FFF; }
   .forms__input {
     width: 100%;
-    border: 5px solid #F9F0DA;
-    height: 42px;
+    border: 5px solid #Fff;
+    height: 58px;
     padding-left: 15px;
-    width: 80%; }
+    width: 80%;
+    color: #5474fd; }
     .forms__input {
       -webkit-transition: all .4s ease-in;
       -o-transition: all .4s ease-in;
       transition: all .4s ease-in; }
       .forms__input:hover, .forms__input:active, .forms__input:active {
-        opacity: .6;
-        border-color: #999; }
-  .forms__buttom {
-    border: 5px solid green;
-    height: 42px;
-    width: 42px;
+        opacity: .9;
+        border-color: #5474fd; }
+    .forms__input::-webkit-input-placeholder {
+      text-align: center;
+      color: #a2a2a2; }
+    .forms__input::-moz-placeholder {
+      text-align: center;
+      color: #a2a2a2; }
+    .forms__input:-ms-input-placeholder {
+      text-align: center;
+      color: #a2a2a2; }
+    .forms__input::-ms-input-placeholder {
+      text-align: center;
+      color: #a2a2a2; }
+    .forms__input::placeholder {
+      text-align: center;
+      color: #a2a2a2; }
+  .forms__button {
+    border: 2px solid transparent;
+    margin: 0;
+    height: 58px;
+    width: 10%;
     cursor: pointer;
-    z-index: 2; }
-    .forms__buttom::before {
-      content: "\f002";
-      font-family: "FontAwesome";
-      font-size: 1.6rem;
-      color: #F9F0DA; }
+    z-index: 2;
+    background-color: #5474fd; }
+  .forms__icon {
+    font-size: 3.2rem;
+    height: 100%;
+    background-color: #5474fd; }
 
 .scrool {
   display: inline-block;
@@ -415,20 +433,26 @@ header {
   left: 0;
   background-color: #5474fd;
   font-size: 1.4rem;
-  height: 80px; }
+  text-align: right; }
+  .nav .container {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .nav__title {
-    margin: 0 0 0 10%;
+    margin: 0 0 0 5%;
     font-weight: 700;
     font-size: 2.4rem;
-    padding: 20px;
+    padding: 20px 20% 20px 20px;
     float: left; }
   .nav__link {
+    height: 80px;
+    vertical-align: middle;
+    height: 100%;
     font-family: 'Aleo' ,sans-serif;
     text-transform: uppercase;
-    float: right;
     padding: 20px; }
-    .nav__link:last-child {
-      color: red; }
 
 main {
   background-color: #333;
@@ -532,10 +556,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   background-image: url(/img/sectionbg1.png);
   background-position: top;
   background-repeat: no-repeat;
@@ -551,17 +571,9 @@ main {
     background-color: #000000bb;
     overflow: hidden;
     padding: 50px 30px;
-    margin: 10% 0;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .about__info:last-child {
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end; }
+    margin: 10% 0 10% auto; }
+    .about__info--left {
+      margin: 10% auto 10% 0; }
   .about__btn {
     display: inline-block;
     text-align: center;
@@ -575,3 +587,25 @@ main {
     text-transform: uppercase;
     font-size: 1.6rem;
     border: 3px solid transparent; }
+
+.footer {
+  margin: 0;
+  height: 100vh;
+  background-image: url(/img/footerbg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #232323; }
+  .footer__title {
+    margin: 0 auto;
+    padding: 10%;
+    text-align: center; }
+  .footer__subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #333; }
+  .footer__foto {
+    min-height: 280px; }
+  .footer__name {
+    outline: 1px solid red; }
